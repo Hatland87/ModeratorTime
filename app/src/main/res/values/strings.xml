@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">ModeratorTimer</string>
+    <string name="innlegg">Innlegg</string>
+    <string name="replikk">Replikk</string>
+    <string name="merTid">+</string>
+    <string name="mindreTid">-</string>
+    <string name="start">Start</string>
 </resources>
