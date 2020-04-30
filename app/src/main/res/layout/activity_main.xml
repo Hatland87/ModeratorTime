@@ -8,8 +8,8 @@
 
     <Button
         android:id="@+id/buttonPlusInnlegg"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         android:text="@string/merTid"
         android:onClick="merTidInnlegg"
         app:layout_constraintBottom_toTopOf="@+id/textViewTimeInnlegg"
@@ -21,8 +21,8 @@
 
     <Button
         android:id="@+id/buttonMinusInnlegg"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         android:text="@string/mindreTid"
         android:onClick="mindreTidInnlegg"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -37,17 +37,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text=""
-        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.265"
+        app:layout_constraintHorizontal_bias="0.25"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/buttonPlusReplikk"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         android:text="@string/merTid"
         android:onClick="merTidReplikk"
         app:layout_constraintBottom_toTopOf="@+id/textViewTimeReplikk"
@@ -59,8 +58,8 @@
 
     <Button
         android:id="@+id/buttonMinusReplikk"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         android:text="@string/mindreTid"
         android:onClick="mindreTidReplikk"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -75,17 +74,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text=""
-        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.735"
+        app:layout_constraintHorizontal_bias="0.75"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/buttonStart"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="160dp"
+        android:layout_height="80dp"
         android:text="@string/start"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -98,10 +96,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/innlegg"
-        android:textSize="25sp"
+        android:textSize="35sp"
         app:layout_constraintBottom_toTopOf="@+id/buttonPlusInnlegg"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintHorizontal_bias="0.24"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.8" />
@@ -111,10 +109,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/replikk"
-        android:textSize="25sp"
+        android:textSize="35sp"
         app:layout_constraintBottom_toTopOf="@+id/buttonPlusReplikk"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintHorizontal_bias="0.76"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.8" />
