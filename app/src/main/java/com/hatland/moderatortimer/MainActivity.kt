@@ -1,8 +1,10 @@
 package com.hatland.moderatortimer
 
+import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.TextView
 import androidx.annotation.RequiresApi
@@ -17,12 +19,14 @@ class MainActivity : AppCompatActivity() {
     private var tidReplikkSekunder = 120
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        Log.i("Main Activity", "onCreate")
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         buttonPress()
     }
 
+    // updates textViews
     private fun buttonPress() {
         val iMin = (tidInnleggSekunder / 60).toString().padStart(2, '0')
         val iSek = (tidInnleggSekunder % 60).toString().padStart(2, '0')
@@ -30,6 +34,14 @@ class MainActivity : AppCompatActivity() {
         val rSek = (tidReplikkSekunder % 60).toString().padStart(2, '0')
         textViewTimeInnlegg.text = "${iMin}:${iSek}"
         textViewTimeReplikk.text = "${rMin}:${rSek}"
+    }
+
+    fun startNy(view: View) {
+        val intent = Intent(this, ControllActivity::class.java).apply {
+            putExtra("TID_INNLEGG", tidInnleggSekunder)
+            putExtra("TID_REPLIKK", tidReplikkSekunder)
+        }
+        startActivity(intent)
     }
 
     fun merTidInnlegg (view: View) {
@@ -76,5 +88,30 @@ class MainActivity : AppCompatActivity() {
                             or View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
                             or View.SYSTEM_UI_FLAG_FULLSCREEN)
         }
+    }
+
+    override fun onStart() {
+        Log.i("Main Activity", "onStart")
+        super.onStart()
+    }
+
+    override fun onResume() {
+        Log.i("Main Activity", "onResume")
+        super.onResume()
+    }
+
+    override fun onPause() {
+        Log.i("Main Activity", "onPause")
+        super.onPause()
+    }
+
+    override fun onStop() {
+        Log.i("Main Activity", "onStop")
+        super.onStop()
+    }
+
+    override fun onDestroy() {
+        Log.i("Main Activity", "onDestroy")
+        super.onDestroy()
     }
 }
