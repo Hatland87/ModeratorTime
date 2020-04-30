@@ -1,16 +1,20 @@
 package com.hatland.moderatortimer
 
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
+import androidx.annotation.RequiresApi
 import kotlinx.android.synthetic.*
 import kotlinx.android.synthetic.main.activity_main.*
+import java.time.LocalTime
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
-    private var tidInnlegg = 0
-    private var tidReplikk = 0
+    private var tidInnleggSekunder = 180
+    private var tidReplikkSekunder = 120
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,28 +24,44 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun buttonPress() {
-        textViewTimeInnlegg.text = tidInnlegg.toString()
-        textViewTimeReplikk.text = tidReplikk.toString()
+        val iMin = (tidInnleggSekunder / 60).toString().padStart(2, '0')
+        val iSek = (tidInnleggSekunder % 60).toString().padStart(2, '0')
+        val rMin = (tidReplikkSekunder / 60).toString().padStart(2, '0')
+        val rSek = (tidReplikkSekunder % 60).toString().padStart(2, '0')
+        textViewTimeInnlegg.text = "${iMin}:${iSek}"
+        textViewTimeReplikk.text = "${rMin}:${rSek}"
     }
 
     fun merTidInnlegg (view: View) {
-        tidInnlegg++
-        buttonPress()
+        // never above 60 min
+        if (tidInnleggSekunder < 3600) {
+            tidInnleggSekunder += 10
+            buttonPress()
+        }
     }
 
     fun mindreTidInnlegg (view: View) {
-        tidInnlegg--
-        buttonPress()
+        // never below 0 secounds
+        if (tidInnleggSekunder > 0) {
+            tidInnleggSekunder -= 10
+            buttonPress()
+        }
     }
 
     fun merTidReplikk (view: View) {
-        tidReplikk++
-        buttonPress()
+        // never above 60 min
+        if (tidReplikkSekunder < 3600) {
+            tidReplikkSekunder += 10
+            buttonPress()
+        }
     }
 
     fun mindreTidReplikk (view: View) {
-        tidReplikk--
-        buttonPress()
+        // never below 0 secounds
+        if (tidReplikkSekunder > 0) {
+            tidReplikkSekunder -= 10
+            buttonPress()
+        }
     }
 
     // fullscreen
