@@ -14,7 +14,6 @@ class ControllActivity : AppCompatActivity() {
     private var tidReplikkSekunder = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        Log.i("Controll Activity", "onCreate")
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_controll)
 
@@ -44,30 +43,5 @@ class ControllActivity : AppCompatActivity() {
         startActivity(Intent(this, TidActivity::class.java).apply {
             putExtra("TID", tid.toLong())
         })
-    }
-
-    override fun onStart() {
-        Log.i("Controll Activity", "onStart")
-        super.onStart()
-    }
-
-    override fun onResume() {
-        Log.i("Controll Activity", "onResume")
-        super.onResume()
-    }
-
-    override fun onPause() {
-        Log.i("Controll Activity", "onPause")
-        super.onPause()
-    }
-
-    override fun onStop() {
-        Log.i("Controll Activity", "onStop")
-        super.onStop()
-    }
-
-    override fun onDestroy() {
-        Log.i("Controll Activity", "onDestroy")
-        super.onDestroy()
     }
 }

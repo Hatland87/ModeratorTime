@@ -19,7 +19,6 @@ class MainActivity : AppCompatActivity() {
     private var tidReplikkSekunder = 120
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        Log.i("Main Activity", "onCreate")
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
@@ -83,30 +82,5 @@ class MainActivity : AppCompatActivity() {
             tidReplikkSekunder -= 10
             buttonPress()
         }
-    }
-
-    override fun onStart() {
-        Log.i("Main Activity", "onStart")
-        super.onStart()
-    }
-
-    override fun onResume() {
-        Log.i("Main Activity", "onResume")
-        super.onResume()
-    }
-
-    override fun onPause() {
-        Log.i("Main Activity", "onPause")
-        super.onPause()
-    }
-
-    override fun onStop() {
-        Log.i("Main Activity", "onStop")
-        super.onStop()
-    }
-
-    override fun onDestroy() {
-        Log.i("Main Activity", "onDestroy")
-        super.onDestroy()
     }
 }

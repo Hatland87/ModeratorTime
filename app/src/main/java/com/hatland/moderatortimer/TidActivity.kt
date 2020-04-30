@@ -27,8 +27,6 @@ class TidActivity : AppCompatActivity() {
 
         val tid = intent.getLongExtra("TID", 0) * 1000
 
-        Log.i("Tid Activity", "Tid er $tid")
-
         buttonStoppTid.setBackgroundColor(Color.rgb(101, 207, 110))
 
         object : CountDownTimer(tid, 1000) {
@@ -50,30 +48,5 @@ class TidActivity : AppCompatActivity() {
 
     fun killCountDown(view: View) {
         finish()
-    }
-
-    override fun onStart() {
-        Log.i("Tid Activity", "onStart")
-        super.onStart()
-    }
-
-    override fun onResume() {
-        Log.i("Tid Activity", "onResume")
-        super.onResume()
-    }
-
-    override fun onPause() {
-        Log.i("Tid Activity", "onPause")
-        super.onPause()
-    }
-
-    override fun onStop() {
-        Log.i("Tid Activity", "onStop")
-        super.onStop()
-    }
-
-    override fun onDestroy() {
-        Log.i("Tid Activity", "onDestroy")
-        super.onDestroy()
     }
 }
