@@ -6,26 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".TidActivity">
 
-    <TextView
-        android:id="@+id/textViewTid"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:textSize="60sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <FrameLayout
+    <Button
+        android:id="@+id/buttonStoppTid"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:textSize="90sp"
+        android:text=""
         android:onClick="killCountDown"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-    </FrameLayout>
-
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

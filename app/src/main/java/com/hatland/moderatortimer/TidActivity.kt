@@ -1,5 +1,7 @@
 package com.hatland.moderatortimer
 
+import android.graphics.Color
+import android.graphics.Color.GREEN
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.util.Log
@@ -27,13 +29,20 @@ class TidActivity : AppCompatActivity() {
 
         Log.i("Tid Activity", "Tid er $tid")
 
+        buttonStoppTid.setBackgroundColor(Color.rgb(101, 207, 110))
+
         object : CountDownTimer(tid, 1000) {
             override fun onTick(millisUntilFinished: Long) {
-                textViewTid.text = "seconds remaining: " + millisUntilFinished / 1000
+                buttonStoppTid.text = (millisUntilFinished / 60000).toString().padStart(2, '0') + ":" + ((millisUntilFinished % 60000) /1000).toString().padStart(2, '0')
+
+                if (millisUntilFinished <= 16000) {
+                    buttonStoppTid.setBackgroundColor(Color.YELLOW)
+                }
             }
 
             override fun onFinish() {
-                textViewTid.text = "done!"
+                buttonStoppTid.text = "Done!"
+                buttonStoppTid.setBackgroundColor(Color.RED)
             }
         }.start()
 
