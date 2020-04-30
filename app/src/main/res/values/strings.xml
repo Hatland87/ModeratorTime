@@ -5,4 +5,5 @@
     <string name="merTid">+</string>
     <string name="mindreTid">-</string>
     <string name="start">Start</string>
+    <string name="imgButton">Button for starting time</string>
 </resources>

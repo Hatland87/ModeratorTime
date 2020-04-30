@@ -6,23 +6,35 @@
     android:layout_height="match_parent"
     tools:context=".ControllActivity">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="188dp"
-        android:layout_height="153dp"
-        android:onClick="startInnlegg"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/btn_star_big_on" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="152dp"
-        android:layout_height="144dp"
-        android:onClick="startReplikk"
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/ic_menu_revert" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageViewInnlegg"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#A4E2EA"
+            android:contentDescription="@string/imgButton"
+            android:onClick="startInnlegg"
+            android:padding="100sp"
+            app:srcCompat="@drawable/innlegg" />
+
+        <ImageView
+            android:id="@+id/imageViewReplikk"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#F8D48C"
+            android:contentDescription="@string/imgButton"
+            android:onClick="startReplikk"
+            android:padding="100sp"
+            app:srcCompat="@drawable/replikk" />
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
