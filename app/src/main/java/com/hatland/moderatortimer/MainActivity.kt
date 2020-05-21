@@ -15,8 +15,8 @@ import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
-    private var tidInnleggSekunder = 180
-    private var tidReplikkSekunder = 120
+    private var tidInnleggSekunder = 120
+    private var tidReplikkSekunder = 60
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
