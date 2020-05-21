@@ -17,14 +17,8 @@ class ControllActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_controll)
 
-        // fullscreen
-        window.decorView.systemUiVisibility = (
-                View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
-                        or View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-                        or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
-                        or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-                        or View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
-                        or View.SYSTEM_UI_FLAG_FULLSCREEN)
+        ScreenControll.alwaysOn(window)
+        ScreenControll.fullscreen(window)
 
         tidInnleggSekunder = intent.getIntExtra("TID_INNLEGG", 0)
         tidReplikkSekunder = intent.getIntExtra("TID_REPLIKK", 0)
