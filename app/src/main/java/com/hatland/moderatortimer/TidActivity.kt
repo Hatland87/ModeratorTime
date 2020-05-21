@@ -24,17 +24,20 @@ class TidActivity : AppCompatActivity() {
         buttonStoppTid.setBackgroundColor(Color.rgb(101, 207, 110))
 
         object : CountDownTimer(tid, 1000) {
+            override fun onFinish() {
+                // dont need, but must have
+            }
+
             override fun onTick(millisUntilFinished: Long) {
                 buttonStoppTid.text = (millisUntilFinished / 60000).toString().padStart(2, '0') + ":" + ((millisUntilFinished % 60000) /1000).toString().padStart(2, '0')
 
                 if (millisUntilFinished <= 16000) {
                     buttonStoppTid.setBackgroundColor(Color.YELLOW)
                 }
-            }
-
-            override fun onFinish() {
-                buttonStoppTid.text = "Done!"
-                buttonStoppTid.setBackgroundColor(Color.RED)
+                if (millisUntilFinished < 1000) {
+                    buttonStoppTid.text = "Done!"
+                    buttonStoppTid.setBackgroundColor(Color.RED)
+                }
             }
         }.start()
 
