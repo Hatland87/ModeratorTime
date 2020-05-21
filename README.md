@@ -1,6 +1,6 @@
 # Stopwatch for moderators
 
-Simple app for ceeping track of how long people have spoken and how mutch time they have left.
+Simple app for keeping track of how long people have spoken and how much time they have left.
 
 Single press on screen to start timer, and stop timer and reset time.
 
