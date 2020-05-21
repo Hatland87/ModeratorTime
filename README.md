@@ -5,16 +5,16 @@ Simple app for ceeping track of how long people have spoken and how mutch time t
 Single press on screen to start timer, and stop timer and reset time.
 
 Set time limit for speeches
-<img align="right" width="300" src="img/setTime.png">
+<img width="300" src="img/setTime.png">
 
 Select type of speech
-<img align="right" width="300" src="img/selectType.png">
+<img width="300" src="img/selectType.png">
 
 Countdown screen, press anywhere to stop and go back to previous screen
-<img align="right" width="300" src="img/countdown1.png">
+<img width="300" src="img/countdown1.png">
 
 Screen changes color to yellow when there is 15 seconds left
-<img align="right" width="300" src="img/countdown2.png">
+<img width="300" src="img/countdown2.png">
 
 Changes to red when time is up
-<img align="right" width="300" src="img/countdown3.png">
+<img width="300" src="img/countdown3.png">
